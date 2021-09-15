@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+  meu_primeiro_docker:
+    build: .
+    command: npm run start:dev
+    ports: 
+      - "3001:3000"
+    volumes: 
+      - .:/opt/docker_files/meu_primeiro_docker
+      - /opt/docker_files/meu_primeiro_docker/node_modules
